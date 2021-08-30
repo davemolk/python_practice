@@ -10,9 +10,8 @@ as they appeared in the original input array.
 
 '''
 def find_senior(lst): 
-    # your code here
-    
-    pass
+    oldest = max(dev['age'] for dev in lst)
+    return list(filter(lambda dev: dev['age'] == oldest, lst))
 
 
 list1 = [
