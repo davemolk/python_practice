@@ -12,3 +12,29 @@ mindPsAndQs('APCDQQPPC'); // => 4
 mindPsAndQs('PQPQ'); // => 4
 mindPsAndQs('PPPXQPPPQ'); // => 5
 '''
+def p_and_q(string):
+    # current, longest = [0, 0]
+    # my_list = list(string)
+    # for i in my_list:
+    #     if i == 'P' or i == 'Q':
+    #         current += 1
+    #         if current > longest:
+    #             longest = current
+    #     else:
+    #         current = 0
+            
+    # return longest
+    current, longest = [0, 0]
+    my_list = list(string)
+    for i in my_list:
+        if i == 'P' or i == 'Q':
+            current += 1
+            longest = max(current, longest)
+        else:
+            current = 0
+            
+    return longest
+
+
+print(p_and_q('PPPXQPPPQ'))
+print(p_and_q('ENGINEERING'))
